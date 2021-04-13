@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "Paint.h"
 
 TEST(TestCaseName, TestName) {
   EXPECT_EQ(1, 1);
