@@ -50,18 +50,18 @@ TEST(PaintObject, TestCustomPaintObject)
 	Paint paint(slowDry, "yellow");
 	ASSERT_TRUE(paint.getDryability() == 2);
 	ASSERT_EQ(paint.getColor(), "yellow");
-	ASSERT_EQ(paint.getDescription(0), "The paint is wet.");
+	ASSERT_EQ(paint.getDescription(0), "The paint is very wet. It glimmers in the sunlight.");
 	paint.incrementIndex();
-	ASSERT_EQ(paint.getDescription(0), "The paint is wet.");
+	ASSERT_EQ(paint.getDescriptionAtCurrentIndex(), "The paint is slightly wet. It is shiny.");
 }
 
 TEST(DryingBackwards, TestDrying)
 {
 	Drier drier;
 	//testing for all three descriptions
-	ASSERT_EQ(drier.printOutNormalDescription(), "The paint is dry.");
-	ASSERT_EQ(drier.printOutNormalDescription(), "The paint is moist.");
-	ASSERT_EQ(drier.printOutNormalDescription(), "The paint is wet.");
+	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is wet.");
+	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is moist.");
+	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is dry.");
 }
 
 int main(int argc, char* argv[]) {

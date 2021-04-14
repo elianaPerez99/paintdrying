@@ -1,8 +1,4 @@
 ﻿  Drier.cpp
-  Paint.cpp
   test.cpp
   Generating Code...
-test.obj : error LNK2019: unresolved external symbol "public: __thiscall Drier::Drier(void)" (??0Drier@@QAE@XZ) referenced in function "private: virtual void __thiscall DryingCorrectly_TestDrying_Test::TestBody(void)" (?TestBody@DryingCorrectly_TestDrying_Test@@EAEXXZ)
-test.obj : error LNK2019: unresolved external symbol "public: bool __thiscall Drier::createPaintFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?createPaintFromFile@Drier@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "private: virtual void __thiscall FileWorks_TestCustomPaint_Test::TestBody(void)" (?TestBody@FileWorks_TestCustomPaint_Test@@EAEXXZ)
-test.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall Drier::printOutNormalDescription(void)" (?printOutNormalDescription@Drier@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "private: virtual void __thiscall DryingCorrectly_TestDrying_Test::TestBody(void)" (?TestBody@DryingCorrectly_TestDrying_Test@@EAEXXZ)
-C:\Users\Eliana School\Desktop\paintdrying\Project\Debug\Project.exe : fatal error LNK1120: 3 unresolved externals
+  Project.vcxproj -> C:\Users\Eliana School\Desktop\paintdrying\Project\Debug\Project.exe

@@ -4,7 +4,6 @@
 using namespace std;
 
 Drier::Drier() {
-
 }
 
 bool Drier::createPaintFromFile(string filename) {
@@ -13,4 +12,11 @@ bool Drier::createPaintFromFile(string filename) {
 
 string Drier::printOutNormalDescription() {
 	return "";
+}
+
+string Drier::printOutBackwardsDescription()
+{
+	string retval = paint.getDescriptionAtCurrentIndex();
+	paint.incrementIndex();
+	return retval;
 }

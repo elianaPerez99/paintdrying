@@ -22,11 +22,13 @@ public:
 	string getDescriptionAtCurrentIndex();
 	int getCurrentIndex();
 	void incrementIndex();
+	void decrementIndex();
 private:
 	Dryability type;
-	string color;
+	string mColor;
 	string descriptions[3];
 	int currentIndex;
+	void setUpDescriptions();
 	
 };
 
