@@ -10,9 +10,9 @@ class Drier
 public:
 	Drier();
 	void getInput(); //gets the input from the player
-	void createPaintFromFile(string filename);
-	void printOutNormalDescription();
-	void printOutBackwardsDescription();
+	bool createPaintFromFile(string filename); //returns true if working, returns false if something goes wrong
+	string printOutNormalDescription();
+	string printOutBackwardsDescription();
 	Paint getPaint();
 private:
 	Paint paint;
