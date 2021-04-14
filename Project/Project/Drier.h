@@ -3,8 +3,6 @@
 #include <string>
 #include <fstream>
 
-using namespace std;
-
 class Drier
 {
 public:
