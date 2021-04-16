@@ -11,7 +11,12 @@ public:
 	bool createPaintFromFile(string filename); //returns true if working, returns false if something goes wrong
 	string printOutNormalDescription();
 	string printOutBackwardsDescription();
-	Paint getPaint();
+	string printOutCustomDescription();
+	Paint getCustomPaint();
 private:
 	Paint paint;
+	Paint customPaint;
+	void printPaint();
+	void printPaintReverse();
+	void printCustomPaint();
 };

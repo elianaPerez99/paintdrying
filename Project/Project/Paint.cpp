@@ -65,7 +65,11 @@ void Paint::setUpDescriptions()
 }
 string Paint::getDescription(int index)
 {
-	return descriptions[0];
+	if (index <= 2 && index >= 0)
+		return descriptions[index];
+	else
+		return "Invalid index for description";
+
 }
 
 string Paint::getDescriptionAtCurrentIndex()
@@ -100,4 +104,9 @@ void Paint::decrementIndex()
 	{
 		currentIndex = 2;
 	}
+}
+
+void Paint::setCurrentIndex(int index)
+{
+	currentIndex = index;
 }

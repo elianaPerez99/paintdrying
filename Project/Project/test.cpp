@@ -4,12 +4,6 @@
 #include <fstream>
 #include <string>
 
-/*TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
-}*/
-
-
 TEST(DryingCorrectly, TestDrying)
 {
 	Drier drier;
@@ -30,9 +24,10 @@ TEST(FileWorks, TestCustomPaint)
 	ASSERT_TRUE(drier.createPaintFromFile(workingName));
 
 	//making sure that paint was actually made correctly
-	ASSERT_TRUE(drier.printOutNormalDescription() == "The paint is very wet. It glimmers in the sunlight.");
-	ASSERT_TRUE(drier.printOutNormalDescription() == "The paint is slightly wet. It is shiny.");
-	ASSERT_TRUE(drier.printOutNormalDescription() == "The paint is moist.");
+	ASSERT_EQ(drier.printOutCustomDescription(), "The paint is very wet. It glimmers in the sunlight.");
+	ASSERT_EQ(drier.printOutCustomDescription(), "The paint is slightly wet. It is shiny.");
+	ASSERT_EQ(drier.printOutCustomDescription(), "The paint is moist.");
+	ASSERT_EQ(drier.getCustomPaint().getColor(), "yellow");
 }
 
 TEST(PaintObject, TestDefaultPaintObject)
@@ -59,12 +54,14 @@ TEST(DryingBackwards, TestDrying)
 {
 	Drier drier;
 	//testing for all three descriptions
-	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is wet.");
-	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is moist.");
 	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is dry.");
+	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is moist.");
+	ASSERT_EQ(drier.printOutBackwardsDescription(), "The paint is wet.");
 }
 
 int main(int argc, char* argv[]) {
+	Drier drier;
+	drier.getInput();
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }
